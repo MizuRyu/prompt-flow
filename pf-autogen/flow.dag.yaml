@@ -1,0 +1,25 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Flow.schema.json
+environment:
+  python_requirements_txt: requirements.txt
+inputs:
+  chat_history:
+    type: list
+    is_chat_history: true
+    default: []
+  question:
+    type: string
+    is_chat_input: true
+outputs:
+  answer:
+    type: string
+    reference: ${autogen_task.output}
+    is_chat_output: true
+nodes:
+- name: autogen_task
+  type: python
+  source:
+    type: code
+    path: autogen_task.py
+  inputs:
+    azureOpenAiConnection: gpt-35-turbo-1106
+    question: ${inputs.question}

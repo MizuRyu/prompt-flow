@@ -1,0 +1,11 @@
+{
+  "nodes": {
+    "autogen_task": {
+      "variant_0": {
+        "inputs": {
+          "question": []
+        }
+      }
+    }
+  }
+}

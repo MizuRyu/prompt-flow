@@ -1,0 +1,6 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/AzureOpenAIConnection.schema.json
+name: open_ai_connection
+type: azure_open_ai
+api_key: "0be39550f4ed4143905211f35eacf25f"
+api_base: "https://oai-test-mizutani.openai.azure.com/"
+api_type: "azure"

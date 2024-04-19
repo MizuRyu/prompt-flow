@@ -1,0 +1,55 @@
+{
+  "package": {},
+  "code": {
+    "chat.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "chat_history": {
+          "type": [
+            "string"
+          ]
+        },
+        "question": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "chat.jinja2"
+    },
+    "autogen_task.py": {
+      "type": "python",
+      "inputs": {
+        "redisConnection": {
+          "type": [
+            "CustomConnection"
+          ]
+        },
+        "question": {
+          "type": [
+            "string"
+          ]
+        },
+        "azureOpenAiConnection": {
+          "type": [
+            "AzureOpenAIConnection"
+          ]
+        },
+        "azureOpenAiModelName": {
+          "type": [
+            "string"
+          ],
+          "default": "gpt-4-32k"
+        },
+        "autogen_workflow_id": {
+          "type": [
+            "int"
+          ],
+          "default": "1"
+        }
+      },
+      "source": "autogen_task.py",
+      "function": "my_python_tool"
+    }
+  }
+}
